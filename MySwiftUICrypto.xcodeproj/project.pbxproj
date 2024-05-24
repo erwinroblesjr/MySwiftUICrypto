@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0D807A02C0054DD000B81D2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8079F2C0054DD000B81D2 /* Colors.swift */; };
 		C0F1683D2BC8B36D00728CFA /* MySwiftUICryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F1683C2BC8B36D00728CFA /* MySwiftUICryptoApp.swift */; };
 		C0F1683F2BC8B36D00728CFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F1683E2BC8B36D00728CFA /* ContentView.swift */; };
 		C0F168412BC8B36F00728CFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0F168402BC8B36F00728CFA /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C0D8079F2C0054DD000B81D2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C0F168392BC8B36D00728CFA /* MySwiftUICrypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySwiftUICrypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F1683C2BC8B36D00728CFA /* MySwiftUICryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySwiftUICryptoApp.swift; sourceTree = "<group>"; };
 		C0F1683E2BC8B36D00728CFA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +34,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0D8079E2C0054AF000B81D2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C0D8079F2C0054DD000B81D2 /* Colors.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C0F168302BC8B36D00728CFA = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +61,7 @@
 		C0F1683B2BC8B36D00728CFA /* MySwiftUICrypto */ = {
 			isa = PBXGroup;
 			children = (
+				C0D8079E2C0054AF000B81D2 /* Extensions */,
 				C0F1683C2BC8B36D00728CFA /* MySwiftUICryptoApp.swift */,
 				C0F1683E2BC8B36D00728CFA /* ContentView.swift */,
 				C0F168402BC8B36F00728CFA /* Assets.xcassets */,
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0F1683F2BC8B36D00728CFA /* ContentView.swift in Sources */,
+				C0D807A02C0054DD000B81D2 /* Colors.swift in Sources */,
 				C0F1683D2BC8B36D00728CFA /* MySwiftUICryptoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
