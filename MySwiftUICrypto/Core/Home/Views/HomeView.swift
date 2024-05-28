@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @EnvironmentObject private var vm: HomeViewModel
     @State private var showPortfolio: Bool = false
     
     var body: some View {
@@ -23,8 +24,11 @@ struct HomeView: View {
                 columnTitles
                 
                 if showPortfolio {
-                   
+                    portfolioCoinsList
+                        .transition(.move(edge: .trailing))
                 }else{
+                    allCoinsList
+                        .transition(.move(edge: .leading))
                 }
                 
                 Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
@@ -39,6 +43,7 @@ struct HomeView_Previews: PreviewProvider {
         NavigationStack {
             HomeView()
         }
+        .environmentObject(dev.homeVm)
     }
 }
 
@@ -70,6 +75,26 @@ extension HomeView {
         }
         .padding(.horizontal)
         
+    }
+    
+    private var allCoinsList: some View {
+        List {
+            ForEach(vm.allCoins) { coin in
+                CoinRowView(coin: coin, showHoldingsColumn: false)
+            }
+            
+        }
+        .listStyle(PlainListStyle())
+    }
+    
+    private var portfolioCoinsList: some View {
+        List {
+            ForEach(vm.portfolioCoins) { coin in
+                CoinRowView(coin: coin, showHoldingsColumn: true)
+            }
+            
+        }
+        .listStyle(PlainListStyle())
     }
     
     private var columnTitles: some View {
